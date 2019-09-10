@@ -1,0 +1,32 @@
+import java.util.*;
+
+class TestClass {
+    public static void main(String args[] ) throws Exception {
+
+        // Write your code here
+        Scanner s = new Scanner(System.in);
+        long n = s.nextLong();
+        long m = s.nextLong();
+        long A[] = new long[(int)n];
+        int index=0;
+        int flag =0;
+        
+        for(int i=0; i<n; i++){
+            A[i] = s.nextLong();
+        }
+        
+        for(int i=0; i<n; i++){
+            if(A[i] == m){
+                flag = 1;
+                index = i;
+            }
+              
+        }
+        
+        if (flag ==1)
+         System.out.print(index+1);
+        else
+         System.out.print(-1);
+
+    }
+}
